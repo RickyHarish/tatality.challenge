@@ -4,13 +4,13 @@ import {
     CART_ADD_ITEM, CART_REMOVE_ITEM, CART_SAVE_SHIPPING_ADDRESS, CART_SAVE_PAYMENT_METHOD
 } from '../constants/cartConstants';
 
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL
+// const BACKEND_URL = process.env.REACT_APP_BACKEND_URL
 
 // Cart API call functions
 function* addToCartSaga(action) {
     try {
         const { id, qty } = action.payload;
-        const { data } = yield call(axios.get, `${BACKEND_URL}/api/products/${id}`);
+        const { data } = yield call(axios.get, `/api/products/${id}`);
         console.log(data)
         yield put({
             type: CART_ADD_ITEM,
@@ -25,7 +25,7 @@ function* addToCartSaga(action) {
         });
         localStorage.setItem('cartItems', JSON.stringify(yield select(state => state.cart.cartItems)));
     } catch (error) {
-        console.log({"error vasthundi": error})
+        console.log({"Adding Cart Error": error})
     }
 }
 
@@ -46,7 +46,7 @@ function* saveShippingAddressSaga(action) {
       yield put({ type: CART_SAVE_SHIPPING_ADDRESS, payload: action.payload });
       localStorage.setItem('shippingAddress', JSON.stringify(action.payload));
   } catch (error) {
-      // handle error
+    console.log({"Shipping address Error": error})
   }
 }
 
@@ -55,7 +55,7 @@ function* savePaymentMethodSaga(action) {
       yield put({ type: CART_SAVE_PAYMENT_METHOD, payload: action.payload });
       localStorage.setItem('paymentMethod', JSON.stringify(action.payload));
   } catch (error) {
-      // handle error
+    console.log({"Payment Method Error": error})
   }
 }
 

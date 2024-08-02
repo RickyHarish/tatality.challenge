@@ -130,7 +130,7 @@ const ProductScreen = ({match}) => {
                             type='button'
                             onClick={addToCartHandler}
                             >
-                                Add To Cart 
+                                Book Now
                             </Button>
                         </ListGroup.Item>
                     </ListGroup>

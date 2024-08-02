@@ -45,7 +45,7 @@ const CartScreen = ({match}) => {
     <Meta title='Shopping Cart'/>
     <Row>
       <Col md={8}>
-          <h1>Shopping Cart</h1>
+          <h1>Properties Cart</h1>
           {cartItems && cartItems.length===0?<Message>Your Cart is Empty<Link to="/">Go Back</Link></Message>:(
             <ListGroup variant='flush'>
               {cartItems && cartItems.map(item=>(

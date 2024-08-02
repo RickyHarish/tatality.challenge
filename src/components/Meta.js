@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 
 // Using default parameters
-const Meta = ({ title = 'Welcome to Shoppie', description = 'We sell the best products for cheap', keywords = 'electronics, buy electronics, cheap electronics' }) => {
+const Meta = ({ title = 'Welcome to Totality Corp', description = 'We sell the best Properties for cheap', keywords = 'House, buy Houses, cheap Houses' }) => {
   return (
     <Helmet>
       <title>{title}</title>
