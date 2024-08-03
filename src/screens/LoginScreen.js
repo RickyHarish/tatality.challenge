@@ -38,7 +38,7 @@ const LoginScreen = () => {
 
 
   return (
-    <>
+    <div>
     <Meta title='login' />
     <FormContainer>
       <h1>Sign In</h1>
@@ -67,7 +67,7 @@ const LoginScreen = () => {
         </Col>
       </Row>
     </FormContainer>
-    </>
+    </div>
   )
 }
 

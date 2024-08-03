@@ -20,7 +20,7 @@ const SearchBox = () => {
 
 
   return (
-    <Form onSubmit={submitHandler} >
+    <Form onSubmit={submitHandler} className="d-flex">
         <Form.Control type='text' name='q' onChange={(e)=>setKeyword(e.target.value)}
         placeholder='Search For Properties...' className='mr-sm-2 ml-sm-5'>
         </Form.Control>

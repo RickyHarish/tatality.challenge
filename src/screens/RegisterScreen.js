@@ -46,6 +46,7 @@ const RegisterScreen = () => {
 
 
   return (
+    <div >
     <FormContainer>
       <h1>Sign Up</h1>
       <Meta title='Register' />
@@ -87,6 +88,7 @@ const RegisterScreen = () => {
         </Col>
       </Row>
     </FormContainer>
+    </div>
   )
 }
 

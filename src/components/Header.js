@@ -23,11 +23,11 @@ const Header = () => {
       <Navbar expand="lg" bg='dark' variant='dark' collapseOnSelect>
       <Container>
         <LinkContainer to='/' >
-          <Navbar.Brand >TOTALITY</Navbar.Brand>
+          <Navbar.Brand >TOTALITY CORP <i style={{ color: 'Blue' }} className="fas fa-home mr-2"></i></Navbar.Brand>
         </LinkContainer>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">         
-          <Nav className="ml-auto justify-content-right">
+          <Nav className="ms-auto">
             <LinkContainer to='/cart'>
               <Nav.Link><i className='fas fa-shopping-cart'></i>Cart</Nav.Link>
             </LinkContainer>
